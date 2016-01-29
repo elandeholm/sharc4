@@ -36,7 +36,7 @@ static void generate_IV(uint8 IV[32])
       fprintf(stderr, "** warning, couldn't read /dev/random - insecure IV generated\n");
     }
 
-#if 1
+#if 0
   {
     int i;
     fprintf(stderr, "made IV:\n");
@@ -79,7 +79,7 @@ static void make_key(uint8 key[32],
   sha256_hmac_finish(&hmac_ctx, key);
   sha256_hmac_destruct(&hmac_ctx);
 
-#if 1
+#if 0
   {
     int i;
     fprintf(stderr, "made key:\n");
